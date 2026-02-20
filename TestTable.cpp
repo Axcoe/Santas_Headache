@@ -25,7 +25,7 @@
 #include "src/table/PapaXMasTable.hpp"
 #include <gtest/gtest.h>
 
-TEST(TestToys, testToy)
+TEST(TestTables, testTable)
 {
     Toy toy = Toy();
     LittlePony littlePony = LittlePony();
