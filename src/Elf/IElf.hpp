@@ -33,7 +33,9 @@ class IElf
         virtual void put(ITable *table, Object *obj) = 0;
         virtual void put(IConveyorBelt *cBelt, Object *obj) = 0;
         virtual Object **look(ITable *table) const = 0;
+        virtual void in(std::string wrap, IConveyorBelt *cBelt) = 0;
         virtual void out(Object *obj, IConveyorBelt *cBelt) = 0;
+        virtual void wrap(Object *wrap, Object *obj) = 0;
 };
 
 #endif

@@ -32,6 +32,7 @@ void PapaXMasElf::take(ITable *table, int i)
 void PapaXMasElf::take(IConveyorBelt *cBelt, int i)
 {
     cBelt->takeFromConveyor();
+    std::cout << "whistles while working" << std::endl;
 }
 
 void PapaXMasElf::put(ITable *table, Object *obj)
@@ -49,8 +50,19 @@ Object **PapaXMasElf::look(ITable *table) const
     return table->getObjects();
 }
 
+void PapaXMasElf::in(std::string wrap, IConveyorBelt *cBelt)
+{
+    cBelt->in(wrap);
+}
+
 void PapaXMasElf::out(Object *obj, IConveyorBelt *cBelt)
 {
     cBelt->putOnConveyor(obj);
     cBelt->out();
+}
+
+void PapaXMasElf::wrap(Object *wrap, Object *obj)
+{
+    wrap->wrapMeThat(obj);
+    std::cout << "tuuuut tuuut tuut" << std::endl;
 }

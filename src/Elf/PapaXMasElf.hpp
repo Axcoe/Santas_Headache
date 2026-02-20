@@ -32,7 +32,9 @@ class PapaXMasElf : public IElf
         virtual void put(ITable *table, Object *obj) override;
         virtual void put(IConveyorBelt *cBelt, Object *obj) override;
         virtual Object **look(ITable *table) const override;
+        virtual void in(std::string wrap, IConveyorBelt *cBelt) override;
         virtual void out(Object *obj, IConveyorBelt *cBelt) override;
+        virtual void wrap(Object *wrap, Object *obj) override;
         ~PapaXMasElf() = default;
 };
 
