@@ -28,6 +28,7 @@ class Teddy : public Toy
     public:
         Teddy();
         void isTaken() override;
+        void print(std::ostream&) const override;
         ~Teddy() = default;
 };
 

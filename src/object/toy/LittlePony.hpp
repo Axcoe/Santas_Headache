@@ -30,6 +30,7 @@ class LittlePony : public Toy
     public:
         LittlePony();
         void isTaken() override;
+        void print(std::ostream&) const override;
         ~LittlePony() = default;
 };
 

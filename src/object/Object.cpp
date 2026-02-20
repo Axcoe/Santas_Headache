@@ -19,16 +19,27 @@ void Object::isTaken()
 {
 }
 
+void Object::wrapMeThat(Object *obj)
+{
+}
+
 bool Object::getTaken() const
 {
     return false;
 }
 
+void Object::print(std::ostream& os) const
+{
+    os << "This is an object.";
+}
+
 std::ostream& operator<<(std::ostream& stream, const Object& obj)
 {
-    if (obj.getTaken())
-        stream << "Obj is taken";
-    else
-        stream << "Obj isn't taken";
+    obj.print(stream);
+
+    // if (obj.getTaken())
+    //     stream << "Obj is taken";
+    // else
+    //     stream << "Obj isn't taken";
     return stream;
 }

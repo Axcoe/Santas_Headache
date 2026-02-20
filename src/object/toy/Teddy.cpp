@@ -28,6 +28,11 @@ void Teddy::isTaken()
     std::cout << "gra hu" << std::endl;
 }
 
+void Teddy::print(std::ostream& os) const
+{
+    os << "teddy";
+}
+
 std::ostream& operator<<(std::ostream& stream, const Teddy& teddy)
 {
     if (teddy.getTaken())
