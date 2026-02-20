@@ -8,7 +8,7 @@
 #ifndef WRAP_HPP_
 #define WRAP_HPP_
 
-#include "../../Object.hpp"
+#include "../Object.hpp"
 
 class Wrap : public Object {
     public:
