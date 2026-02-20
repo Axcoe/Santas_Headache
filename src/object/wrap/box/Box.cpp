@@ -40,13 +40,13 @@ void Box::closeMe()
 
 void Box::print(std::ostream& os) const
 {
-    os << "Box";
-}
-
-std::ostream& operator<<(std::ostream &stream, const Box &box)
-{
-    stream << (box.getEmpty() ? "Box is empty." : "Box is not empty.");
-    stream << (box.getOpen() ? "Box is open." : "Box is open.");
-
-    return stream;
+    if (_isEmpty == true && _isOpen == true) {
+        os << "Box is empty and open.";
+    } else if (_isEmpty == false && _isOpen == true) {
+        os << "Box is not empty and open.";
+    } else if (_isEmpty == false && _isOpen == false) {
+        os << "Box is not empty and close.";
+    } else {
+        os << "Box is empty and close.";
+    }
 }

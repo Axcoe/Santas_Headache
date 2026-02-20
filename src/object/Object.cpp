@@ -36,10 +36,5 @@ void Object::print(std::ostream& os) const
 std::ostream& operator<<(std::ostream& stream, const Object& obj)
 {
     obj.print(stream);
-
-    // if (obj.getTaken())
-    //     stream << "Obj is taken";
-    // else
-    //     stream << "Obj isn't taken";
     return stream;
 }

@@ -41,13 +41,13 @@ bool Wrap::getOpen() const
 
 void Wrap::print(std::ostream& os) const
 {
-    os << "wrap.";
-}
-
-std::ostream& operator<<(std::ostream &stream, const Wrap &wrap)
-{
-    stream << (wrap.getEmpty() ? "Wrap is empty." : "Wrap is not empty.");
-    stream << (wrap.getOpen() ? "Wrap is open." : "Wrap is open.");
-
-    return stream;
+    if (_isEmpty == true && _isOpen == true) {
+        os << "Wrap is empty and open.";
+    } else if (_isEmpty == false && _isOpen == true) {
+        os << "Wrap is not empty and open.";
+    } else if (_isEmpty == false && _isOpen == false) {
+        os << "Wrap is not empty and close.";
+    } else {
+        os << "Wrap is empty and close.";
+    }
 }
