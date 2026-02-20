@@ -32,12 +32,3 @@ void Teddy::print(std::ostream& os) const
 {
     os << (_taken ? "teddy is taken" : "teddy isn't taken");
 }
-
-std::ostream& operator<<(std::ostream& stream, const Teddy& teddy)
-{
-    if (teddy.getTaken())
-        stream << "Teddy is taken";
-    else
-        stream << "Teddy isn't taken";
-    return stream;
-}

@@ -3,35 +3,34 @@
  * EPITECH PROJECT - Sat, Feb, 2026                                                     *
  * Title           - Santas_Headache                                                    *
  * Description     -                                                                    *
- *     LittlePony                                                                      *
+ *     PapaXMasElf                                                                      *
  *                                                                                      *
  * ------------------------------------------------------------------------------------ *
  *                                                                                      *
- *       ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄  ▄▀▀█▀▄    ▄▀▀▀█▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▄▄▄▄   ▄▀▀▄ ▄▄             *
- *      ▐  ▄▀   ▐ █   █   █ █   █  █  █    █  ▐ ▐  ▄▀   ▐ █ █    ▌ █  █   ▄▀            *
- *        █▄▄▄▄▄  ▐  █▀▀▀▀  ▐   █  ▐  ▐   █       █▄▄▄▄▄  ▐ █      ▐  █▄▄▄█             *
- *        █    ▌     █          █        █        █    ▌    █         █   █             *
- *       ▄▀▄▄▄▄    ▄▀        ▄▀▀▀▀▀▄   ▄▀        ▄▀▄▄▄▄    ▄▀▄▄▄▄▀   ▄▀  ▄▀             *
- *       █    ▐   █         █       █ █          █    ▐   █     ▐   █   █               *
- *       ▐        ▐         ▐       ▐ ▐          ▐        ▐         ▐   ▐               *
+ *         ░        ░       ░░        ░        ░        ░░      ░░  ░░░░  ░             *
+ *         ▒  ▒▒▒▒▒▒▒  ▒▒▒▒  ▒▒▒▒  ▒▒▒▒▒▒▒  ▒▒▒▒  ▒▒▒▒▒▒▒  ▒▒▒▒  ▒  ▒▒▒▒  ▒             *
+ *         ▓      ▓▓▓       ▓▓▓▓▓  ▓▓▓▓▓▓▓  ▓▓▓▓      ▓▓▓  ▓▓▓▓▓▓▓        ▓             *
+ *         █  ███████  ██████████  ███████  ████  ███████  ████  █  ████  █             *
+ *         █        █  ███████        ████  ████        ██      ██  ████  █             *
  *                                                                                      *
  * ------------------------------------------------------------------------------------ */
 
-#ifndef INCLUDED_LITTLEPONY_HPP
-    #define INCLUDED_LITTLEPONY_HPP
+#ifndef INCLUDED_PAPAXMASELF_HPP
+    #define INCLUDED_PAPAXMASELF_HPP
 
 #include <iostream>
-#include "Toy.hpp"
+#include "IElf.hpp"
 
-class LittlePony : public Toy
+class PapaXMasElf : public IElf
 {
     private:
     protected:
     public:
-        LittlePony();
-        void isTaken() override;
-        void print(std::ostream&) const override;
-        ~LittlePony() = default;
+        PapaXMasElf();
+        virtual void take(ITable *table, int i) override;
+        virtual void put(ITable *table, Object *obj) override;
+        virtual Object **look(ITable *table) const override;
+        ~PapaXMasElf() = default;
 };
 
 #endif

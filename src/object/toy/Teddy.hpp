@@ -32,8 +32,6 @@ class Teddy : public Toy
         ~Teddy() = default;
 };
 
-std::ostream& operator<<(std::ostream&, const Teddy&);
-
 #endif
 
 /* ------------------------------------------------------------------------------------ *

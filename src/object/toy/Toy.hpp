@@ -35,8 +35,6 @@ class Toy : public Object
         ~Toy() = default;
 };
 
-std::ostream& operator<<(std::ostream&, const Toy&);
-
 #endif
 
 /* ------------------------------------------------------------------------------------ *

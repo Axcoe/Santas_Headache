@@ -3,35 +3,33 @@
  * EPITECH PROJECT - Sat, Feb, 2026                                                     *
  * Title           - Santas_Headache                                                    *
  * Description     -                                                                    *
- *     LittlePony                                                                      *
+ *     IElf                                                                             *
  *                                                                                      *
  * ------------------------------------------------------------------------------------ *
  *                                                                                      *
- *       ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄  ▄▀▀█▀▄    ▄▀▀▀█▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▄▄▄▄   ▄▀▀▄ ▄▄             *
- *      ▐  ▄▀   ▐ █   █   █ █   █  █  █    █  ▐ ▐  ▄▀   ▐ █ █    ▌ █  █   ▄▀            *
- *        █▄▄▄▄▄  ▐  █▀▀▀▀  ▐   █  ▐  ▐   █       █▄▄▄▄▄  ▐ █      ▐  █▄▄▄█             *
- *        █    ▌     █          █        █        █    ▌    █         █   █             *
- *       ▄▀▄▄▄▄    ▄▀        ▄▀▀▀▀▀▄   ▄▀        ▄▀▄▄▄▄    ▄▀▄▄▄▄▀   ▄▀  ▄▀             *
- *       █    ▐   █         █       █ █          █    ▐   █     ▐   █   █               *
- *       ▐        ▐         ▐       ▐ ▐          ▐        ▐         ▐   ▐               *
+ *             ███████╗██████╗ ██╗████████╗███████╗ ██████╗██╗  ██╗                     *
+ *             ██╔════╝██╔══██╗██║╚══██╔══╝██╔════╝██╔════╝██║  ██║                     *
+ *             █████╗  ██████╔╝██║   ██║   █████╗  ██║     ███████║                     *
+ *             ██╔══╝  ██╔═══╝ ██║   ██║   ██╔══╝  ██║     ██╔══██║                     *
+ *             ███████╗██║     ██║   ██║   ███████╗╚██████╗██║  ██║                     *
+ *             ╚══════╝╚═╝     ╚═╝   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝                     *
  *                                                                                      *
  * ------------------------------------------------------------------------------------ */
 
-#ifndef INCLUDED_LITTLEPONY_HPP
-    #define INCLUDED_LITTLEPONY_HPP
+#ifndef INCLUDED_IELF_HPP
+    #define INCLUDED_IELF_HPP
 
 #include <iostream>
-#include "Toy.hpp"
+#include "../table/ITable.hpp"
 
-class LittlePony : public Toy
+class IElf
 {
-    private:
     protected:
     public:
-        LittlePony();
-        void isTaken() override;
-        void print(std::ostream&) const override;
-        ~LittlePony() = default;
+        virtual ~IElf() = default;
+        virtual void take(ITable *table, int i) = 0;
+        virtual void put(ITable *table, Object *obj) = 0;
+        virtual Object **look(ITable *table) const = 0;
 };
 
 #endif
