@@ -30,7 +30,7 @@ void LittlePony::isTaken()
 
 void LittlePony::print(std::ostream& os) const
 {
-    os << "littlepony";
+    os << _taken ? "little pony is taken" : "little pony isn't taken";
 }
 
 std::ostream& operator<<(std::ostream &stream, const LittlePony& littlePony)

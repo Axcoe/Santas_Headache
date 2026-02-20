@@ -30,7 +30,7 @@ void Teddy::isTaken()
 
 void Teddy::print(std::ostream& os) const
 {
-    os << "teddy";
+    os << (_taken ? "teddy is taken" : "teddy isn't taken");
 }
 
 std::ostream& operator<<(std::ostream& stream, const Teddy& teddy)
