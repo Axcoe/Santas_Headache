@@ -36,3 +36,11 @@ void Box::closeMe()
         std::cout << "The wrap is already closed." << std::endl;
     }
 }
+
+std::ostream& operator<<(std::ostream &stream, const Box &box)
+{
+    stream << (box.getEmpty() ? "Wrap is empty." : "Wrap is not empty.");
+    stream << (box.getOpen() ? "Wrap is open." : "Wrap is open.");
+
+    return stream;
+}

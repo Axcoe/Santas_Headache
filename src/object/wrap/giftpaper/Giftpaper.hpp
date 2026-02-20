@@ -21,4 +21,6 @@ class Giftpaper : public Wrap {
     private:
 };
 
+std::ostream& operator<<(std::ostream&, const Giftpaper&);
+
 #endif /* !GIFTPAPER_HPP_ */

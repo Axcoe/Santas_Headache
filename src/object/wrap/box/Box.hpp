@@ -22,4 +22,6 @@ class Box : public Wrap {
     private:
 };
 
+std::ostream& operator<<(std::ostream&, const Box&);
+
 #endif /* !BOX_HPP_ */

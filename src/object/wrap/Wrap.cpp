@@ -28,3 +28,21 @@ void Wrap::openMe()
         _isEmpty = true;
     }
 }
+
+bool Wrap::getEmpty() const
+{
+    return _isEmpty;
+}
+
+bool Wrap::getOpen() const
+{
+    return _isOpen;
+}
+
+std::ostream& operator<<(std::ostream &stream, const Wrap &wrap)
+{
+    stream << (wrap.getEmpty() ? "Wrap is empty." : "Wrap is not empty.");
+    stream << (wrap.getOpen() ? "Wrap is open." : "Wrap is open.");
+
+    return stream;
+}

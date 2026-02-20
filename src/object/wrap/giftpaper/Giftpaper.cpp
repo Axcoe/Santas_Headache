@@ -25,3 +25,11 @@ void Giftpaper::wrapMeThat(Object *obj)
         std::cerr << "The giftpaper is already fill and can't wrap an object." << std::endl;
     }
 }
+
+std::ostream& operator<<(std::ostream &stream, const Giftpaper &gp)
+{
+    stream << (gp.getEmpty() ? "Wrap is empty." : "Wrap is not empty.");
+    stream << (gp.getOpen() ? "Wrap is open." : "Wrap is open.");
+
+    return stream;
+}

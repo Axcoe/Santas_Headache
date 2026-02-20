@@ -17,6 +17,10 @@ class Wrap : public Object {
 
         void openMe();
 
+        bool getOpen() const;
+        bool getEmpty() const;
+        Object *getObj() const;
+
     protected:
         bool _isOpen = true;
         bool _isEmpty = true;
@@ -24,5 +28,7 @@ class Wrap : public Object {
 
     private:
 };
+
+std::ostream& operator<<(std::ostream&, const Wrap&);
 
 #endif /* !WRAP_HPP_ */
