@@ -17,7 +17,7 @@ class PapaXMasConveyorBelt : public IConveyorBelt {
 
         void putOnConveyor(Object *obj) override;
         Object *takeFromConveyor() override;
-        void in() override;
+        void in(std::string wrap) override;
         void out() override;
 
     protected:

@@ -18,7 +18,7 @@ class IConveyorBelt {
 
         virtual void putOnConveyor(Object *obj) = 0;
         virtual Object *takeFromConveyor() = 0;
-        virtual void in() = 0;
+        virtual void in(std::string) = 0;
         virtual void out() = 0;
     protected:
     private:

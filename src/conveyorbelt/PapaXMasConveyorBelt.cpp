@@ -6,6 +6,8 @@
 */
 
 #include "PapaXMasConveyorBelt.hpp"
+#include "../object/wrap/box/Box.hpp"
+#include "../object/wrap/giftpaper/Giftpaper.hpp"
 
 PapaXMasConveyorBelt::PapaXMasConveyorBelt()
 {
@@ -30,13 +32,24 @@ Object *PapaXMasConveyorBelt::takeFromConveyor()
     return _obj;
 }
 
-void PapaXMasConveyorBelt::in()
+void PapaXMasConveyorBelt::in(std::string wrap)
 {
-    if (_isEmpty == true) {
-        _obj = new Wrap;
-        _isEmpty = false;
+    if (wrap == "box") {
+        if (_isEmpty == true) {
+            _obj = new Box;
+            _isEmpty = false;
+        } else {
+            std::cerr << "Can't 'in' a wrap, no place." << std::endl;
+        }
+    } else if (wrap == "wrap") {
+        if (_isEmpty == true) {
+            _obj = new Giftpaper;
+            _isEmpty = false;
+        } else {
+            std::cerr << "Can't 'in' a wrap, no place." << std::endl;
+        }
     } else {
-        std::cerr << "Can't 'in' a wrap, no place." << std::endl;
+        std::cerr << "Don't know this wrap." << std::endl;
     }
 }
 
@@ -44,6 +57,7 @@ void PapaXMasConveyorBelt::out()
 {
     if (_isEmpty == false) {
         delete _obj;
+        _obj = nullptr;
         _isEmpty = true;
     } else {
         std::cerr << "Can't 'out', nothing on a the coveyor belt." << std::endl;
