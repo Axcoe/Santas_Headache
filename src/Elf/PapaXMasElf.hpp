@@ -28,8 +28,11 @@ class PapaXMasElf : public IElf
     public:
         PapaXMasElf();
         virtual void take(ITable *table, int i) override;
+        virtual void take(IConveyorBelt *cBelt, int i) override;
         virtual void put(ITable *table, Object *obj) override;
+        virtual void put(IConveyorBelt *cBelt, Object *obj) override;
         virtual Object **look(ITable *table) const override;
+        virtual void out(Object *obj, IConveyorBelt *cBelt) override;
         ~PapaXMasElf() = default;
 };
 

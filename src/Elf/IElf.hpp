@@ -21,6 +21,7 @@
 
 #include <iostream>
 #include "../table/ITable.hpp"
+#include "../conveyorbelt/IConveyorBelt.hpp"
 
 class IElf
 {
@@ -28,8 +29,11 @@ class IElf
     public:
         virtual ~IElf() = default;
         virtual void take(ITable *table, int i) = 0;
+        virtual void take(IConveyorBelt *cBelt, int i) = 0;
         virtual void put(ITable *table, Object *obj) = 0;
+        virtual void put(IConveyorBelt *cBelt, Object *obj) = 0;
         virtual Object **look(ITable *table) const = 0;
+        virtual void out(Object *obj, IConveyorBelt *cBelt) = 0;
 };
 
 #endif
