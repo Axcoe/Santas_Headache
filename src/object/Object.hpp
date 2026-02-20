@@ -8,6 +8,8 @@
 #ifndef OBJECT_HPP_
 #define OBJECT_HPP_
 
+#include <iomanip>
+
 class Object {
     public:
         Object();

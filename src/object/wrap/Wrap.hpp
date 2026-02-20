@@ -8,12 +8,20 @@
 #ifndef WRAP_HPP_
 #define WRAP_HPP_
 
-class Wrap {
+#include "../../Object.hpp"
+
+class Wrap : public Object {
     public:
         Wrap();
         ~Wrap();
 
+        void openMe();
+
     protected:
+        bool _isOpen = true;
+        bool _isEmpty = true;
+        Object *_obj = nullptr;
+
     private:
 };
 
