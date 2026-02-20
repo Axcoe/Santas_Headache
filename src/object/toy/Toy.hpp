@@ -30,7 +30,7 @@ class Toy : public Object
     public:
         Toy();
         virtual void isTaken();
-        bool getTaken() const;
+        virtual bool getTaken() const;
         ~Toy() = default;
 };
 

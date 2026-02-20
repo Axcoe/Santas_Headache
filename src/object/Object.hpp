@@ -14,9 +14,12 @@ class Object {
     public:
         Object();
         ~Object();
-
+        virtual void isTaken();
+        virtual bool getTaken() const;
     protected:
     private:
 };
+
+std::ostream& operator<<(std::ostream& stream, const Object& obj);
 
 #endif /* !OBJECT_HPP_ */

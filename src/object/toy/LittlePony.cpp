@@ -3,7 +3,7 @@
  * EPITECH PROJECT - Sat, Feb, 2026                                                     *
  * Title           - Santas_Headache                                                    *
  * Description     -                                                                    *
- *     LittlePoney                                                                      *
+ *     LittlePony                                                                      *
  *                                                                                      *
  * ------------------------------------------------------------------------------------ *
  *                                                                                      *
@@ -15,24 +15,24 @@
  *                                                                                      *
  * ------------------------------------------------------------------------------------ */
 
-#include "LittlePoney.hpp"
+#include "LittlePony.hpp"
 
-LittlePoney::LittlePoney()
+LittlePony::LittlePony()
 {
     // Default constructor
 }
 
-void LittlePoney::isTaken()
+void LittlePony::isTaken()
 {
     _taken = true;
     std::cout << "yo man" << std::endl;
 }
 
-std::ostream& operator<<(std::ostream &stream, const LittlePoney& littlePoney)
+std::ostream& operator<<(std::ostream &stream, const LittlePony& littlePony)
 {
-    if (littlePoney.getTaken())
-        stream << "LittlePoney is taken";
+    if (littlePony.getTaken())
+        stream << "LittlePony is taken";
     else
-        stream << "LittlePoney isn't taken";
+        stream << "LittlePony isn't taken";
     return stream;
 }

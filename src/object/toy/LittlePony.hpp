@@ -3,7 +3,7 @@
  * EPITECH PROJECT - Sat, Feb, 2026                                                     *
  * Title           - Santas_Headache                                                    *
  * Description     -                                                                    *
- *     LittlePoney                                                                      *
+ *     LittlePony                                                                      *
  *                                                                                      *
  * ------------------------------------------------------------------------------------ *
  *                                                                                      *
@@ -17,23 +17,23 @@
  *                                                                                      *
  * ------------------------------------------------------------------------------------ */
 
-#ifndef INCLUDED_LITTLEPONEY_HPP
-    #define INCLUDED_LITTLEPONEY_HPP
+#ifndef INCLUDED_LITTLEPONY_HPP
+    #define INCLUDED_LITTLEPONY_HPP
 
 #include <iostream>
 #include "Toy.hpp"
 
-class LittlePoney : public Toy
+class LittlePony : public Toy
 {
     private:
     protected:
     public:
-        LittlePoney();
+        LittlePony();
         void isTaken() override;
-        ~LittlePoney() = default;
+        ~LittlePony() = default;
 };
 
-std::ostream& operator<<(std::ostream&, const LittlePoney&);
+std::ostream& operator<<(std::ostream&, const LittlePony&);
 
 #endif
 
