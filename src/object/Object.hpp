@@ -16,6 +16,13 @@ class Object {
         ~Object();
         virtual void isTaken();
         virtual bool getTaken() const;
+
+        // void openMe();
+        // bool getOpen() const;
+        // bool getEmpty() const;
+        virtual void wrapMeThat(Object *obj);
+        virtual void print(std::ostream&) const;
+
     protected:
     private:
 };

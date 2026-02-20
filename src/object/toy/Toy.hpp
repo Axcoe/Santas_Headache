@@ -31,6 +31,7 @@ class Toy : public Object
         Toy();
         virtual void isTaken();
         virtual bool getTaken() const;
+        virtual void print(std::ostream&) const;
         ~Toy() = default;
 };
 

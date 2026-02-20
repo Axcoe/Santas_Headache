@@ -17,6 +17,7 @@ class Box : public Wrap {
 
         void wrapMeThat(Object *obj);
         void closeMe();
+        void print(std::ostream&) const;
 
     protected:
     private:

@@ -28,6 +28,11 @@ void LittlePony::isTaken()
     std::cout << "yo man" << std::endl;
 }
 
+void LittlePony::print(std::ostream& os) const
+{
+    os << "littlepony";
+}
+
 std::ostream& operator<<(std::ostream &stream, const LittlePony& littlePony)
 {
     if (littlePony.getTaken())

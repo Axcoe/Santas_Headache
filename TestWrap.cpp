@@ -10,7 +10,18 @@
 #include "src/object/wrap/giftpaper/Giftpaper.hpp"
 #include "src/object/toy/Toy.hpp"
 #include "src/object/toy/Teddy.hpp"
+#include "src/object/Object.hpp"
 #include <gtest/gtest.h>
+
+Object *MyUnitTests(Object **listObj)
+{
+    listObj[1]->wrapMeThat(listObj[0]);
+    listObj[2]->wrapMeThat(listObj[1]);
+
+    std::cout << *listObj[1] << std::endl;
+
+    return listObj[2];
+}
 
 TEST(TestWrap, testWrap)
 {
@@ -24,4 +35,7 @@ TEST(TestWrap, testWrap)
 
     Giftpaper giftpaper = Giftpaper();
     list[2] = &giftpaper;
+
+    Object *obj = MyUnitTests(list);
+    std::cout << *obj << std::endl;
 }

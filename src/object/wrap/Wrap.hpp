@@ -19,7 +19,8 @@ class Wrap : public Object {
 
         bool getOpen() const;
         bool getEmpty() const;
-        Object *getObj() const;
+        void print(std::ostream&) const;
+
 
     protected:
         bool _isOpen = true;

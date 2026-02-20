@@ -34,6 +34,11 @@ bool Toy::getTaken() const
     return _taken;
 }
 
+void Toy::print(std::ostream& os) const
+{
+    os << "toy";
+}
+
 std::ostream& operator<<(std::ostream& stream, const Toy& toy)
 {
     if (toy.getTaken())

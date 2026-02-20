@@ -18,7 +18,8 @@ Box::~Box()
 
 void Box::wrapMeThat(Object *obj)
 {
-    if (_isEmpty == true || _isOpen == true) {
+    if (_isEmpty == true && _isOpen == true) {
+        std::cout << "Box has now an object in !" << std::endl;
         _obj = obj;
         _isEmpty = false;
     } else if (_isEmpty == false) {
@@ -37,10 +38,15 @@ void Box::closeMe()
     }
 }
 
+void Box::print(std::ostream& os) const
+{
+    os << "Box";
+}
+
 std::ostream& operator<<(std::ostream &stream, const Box &box)
 {
-    stream << (box.getEmpty() ? "Wrap is empty." : "Wrap is not empty.");
-    stream << (box.getOpen() ? "Wrap is open." : "Wrap is open.");
+    stream << (box.getEmpty() ? "Box is empty." : "Box is not empty.");
+    stream << (box.getOpen() ? "Box is open." : "Box is open.");
 
     return stream;
 }

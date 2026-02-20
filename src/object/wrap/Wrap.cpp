@@ -39,6 +39,11 @@ bool Wrap::getOpen() const
     return _isOpen;
 }
 
+void Wrap::print(std::ostream& os) const
+{
+    os << "wrap.";
+}
+
 std::ostream& operator<<(std::ostream &stream, const Wrap &wrap)
 {
     stream << (wrap.getEmpty() ? "Wrap is empty." : "Wrap is not empty.");

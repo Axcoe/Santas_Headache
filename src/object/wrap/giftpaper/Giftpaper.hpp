@@ -16,6 +16,7 @@ class Giftpaper : public Wrap {
         ~Giftpaper();
 
         void wrapMeThat(Object *obj);
+        void print(std::ostream&) const;
 
     protected:
     private:
