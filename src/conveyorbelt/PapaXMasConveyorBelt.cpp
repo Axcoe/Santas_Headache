@@ -41,7 +41,7 @@ void PapaXMasConveyorBelt::in(std::string wrap)
         } else {
             std::cerr << "Can't 'in' a wrap, no place." << std::endl;
         }
-    } else if (wrap == "wrap") {
+    } else if (wrap == "giftpaper") {
         if (_isEmpty == true) {
             _obj = new Giftpaper;
             _isEmpty = false;

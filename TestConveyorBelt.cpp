@@ -21,6 +21,6 @@ TEST(TestConveyorBelt, testConveyorBelt)
     IConveyorBelt *conv = new PapaXMasConveyorBelt();
     Teddy teddy = Teddy();
 
-    conv->in();
+    conv->in("box");
     Object *objFromConv = conv->takeFromConveyor();
 }
